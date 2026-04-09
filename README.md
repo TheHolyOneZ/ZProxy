@@ -8,6 +8,10 @@
 [![Rust](https://img.shields.io/badge/Rust-1.77+-orange)](https://rustup.rs)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey)](#building)
 
+<br/>
+
+<img src="mainview_image/image.png" alt="ZProxy screenshot" width="900" />
+
 </div>
 
 ---
