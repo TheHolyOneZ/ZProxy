@@ -31,6 +31,25 @@ input {
   font-size: inherit;
 }
 
+/* hide number input spinners */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* focus glow on any wrapper that contains a focused input/select */
+.input-wrap:focus-within {
+  border-color: var(--accent-border) !important;
+  box-shadow: 0 0 0 2px var(--accent-sub) !important;
+}
+
+select { outline: none; }
+
 a { color: inherit; text-decoration: none; }
 
 svg { display: block; flex-shrink: 0; }

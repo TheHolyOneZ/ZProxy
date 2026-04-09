@@ -40,18 +40,26 @@ export function RequestList() {
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%', overflow: 'hidden' }}>
       <div style={{
         height: HEADER_HEIGHT, display: 'grid',
-        gridTemplateColumns: '10px 52px 1fr 1fr 44px 60px 56px',
+        gridTemplateColumns: '10px 56px 1fr 1fr 46px 58px 54px',
         alignItems: 'center', gap: 8, padding: '0 10px',
         background: 'var(--surface)', borderBottom: '1px solid var(--border)',
         flexShrink: 0,
       }}>
         <div />
-        {['Method', 'Host', 'Path', 'Status', 'Size', 'Time'].map((col) => (
-          <span key={col} style={{
+        {[
+          { label: 'Method', align: 'left' },
+          { label: 'Host',   align: 'left' },
+          { label: 'Path',   align: 'left' },
+          { label: 'Status', align: 'left' },
+          { label: 'Size',   align: 'right' },
+          { label: 'Time',   align: 'right' },
+        ].map((col) => (
+          <span key={col.label} style={{
             fontSize: 10, fontWeight: 600, textTransform: 'uppercase',
-            letterSpacing: '0.06em', color: 'var(--text-muted)',
+            letterSpacing: '0.07em', color: 'var(--text-muted)',
+            textAlign: col.align as 'left' | 'right',
           }}>
-            {col}
+            {col.label}
           </span>
         ))}
       </div>
